@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Requested Items</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 80px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+        h2 {
+
+            color: white;
+            text-align: center;
+        }
+
+                body {
+            background-image: url("../static/grey-abstract-background-with-layers-vector.jpg");
+        }
+
+
+        * {
+box-sizing: border-box;
+}
+.column {
+float: left;
+width: 33.33%;
+padding: 5px;
+}
+/* Clearfix (clear floats) */
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+
+
+    </style>
+</head>
+<!--suppress XmlDeprecatedElement -->
+<center>
+    <h1><b>Request Items</b></h1>
+</center>
+<body>
+
+    <div class="row">
+        <div class="column">
+            <img src="https://codehs.com/uploads/f47c6073e46863a855a7c0331e929899" alt="Uniforms" style="width: 50%;" />
+            <h2>School Uniforms</h2>
+            <br />
+            <br />
+            <img src="https://codehs.com/uploads/303770948b2b47c7010bb6172ab7a038" alt="Markers" style="width: 50%;" />
+            <h2>Markers</h2>
+            <br />
+            <br />
+            <img src="https://codehs.com/uploads/be069a6344d1f24b4468be65e22f5273" alt="Color pencils" style="width: 50%;" />
+            <h2>Color pencils</h2>
+        </div>
+        <div class="column">
+            <img src="https://codehs.com/uploads/a5df9802026aeaa9e4de841d980603e9" alt="Backpack" style="width: 50%;" />
+            <h2>Backpack</h2>
+            <br />
+            <br />
+            <img src="https://codehs.com/uploads/0cb4911407f5554ecdce5d87bf61aff7" alt="Pencils" style="width: 50%;" />
+            <h2>Pencils</h2>
+            <br />
+            <br />
+            <img src="https://codehs.com/uploads/c650eabb87a6c8dd511c5450121aea0e" alt="Eraser" style="width: 50%;" />
+            <h2>Erasers</h2>
+        </div>
+        <div class="column">
+            <img src="https://codehs.com/uploads/75eee8538bae0f3376ab30a557c8e4b5" alt="Glue" style="width: 50%;" />
+            <h2>Glue</h2>
+            <br />
+            <br />
+            <img src="https://codehs.com/uploads/7c5305caba984f76f3278d28d0300508" alt="Highlighters" style="width: 50%;" />
+            <h2>Highlighters</h2>
+            <br />
+
+            <br />
+            <img src="https://codehs.com/uploads/6a816f91b2537ae39e87953d50ea14c5" alt="Scissors" style="width: 50%;" />
+            <h2>Scissors</h2>
+                 <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+        </div>
+    </div>
+
+<script type="text/javascript">
+      $('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+
+      $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+      });
+    </script>
+</body>

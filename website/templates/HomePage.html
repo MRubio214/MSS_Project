@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {margin: 0;}
+
+            ul.topnav {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+
+
+
+            ul.topnav li {float: left;}
+
+            ul.topnav li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+            ul.topnav li a.active {background-color: #c0c8c5;}
+
+            ul.topnav li.right {float: right;}
+
+            @media screen and (max-width: 600px) {
+              ul.topnav li.right,
+              ul.topnav li {float: none;}
+            }
+
+
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            body {
+                background-image: url("../static/grey-abstract-background-with-layers-vector.jpg");
+            }
+            h2 {
+                font-size: 75px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                }
+
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul class="topnav">
+            <li><a class="active" id = "home" href="/">Home</a></li>
+            <li><a id = "about" href="/about">About</a></li>
+            <li><a id = "requestingitems" href="/requestingitems">RequestingItems</a></li>
+            <li class="right"><a id = "signup/login" href="/login">Signup/Login</a></li>
+        </ul>
+
+
+        <div class="background"></div>
+
+
+        <div style="padding: 0 16px;">
+            <h2>MSS:Marketplace for School Supplies</h2>
+            <p>
+                This website or app would create a program for students where they can sell, buy, borrow, or lend school supplies. This service can also be extended to other categories such as clothing, electronic devices, vehicles, ect.
+                This application would not only save time, but would also save money for students on both ends. Students who are in need could talk to their principal and they could download this app and get help from their community or
+                former students.
+            </p>
+            <br>
+            <br>
+            <p>
+            <img src="../static/HappyKidsSchoolSupplies.jpg" alt="SchoolSupplies" />
+            </p>
+        </div>
+
+
+    </body>
+</html>
