@@ -25,9 +25,18 @@
         clear: both;
         display: table;
     }
+
+
+    body {
+  background-image: url('../static/');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 </style>
   </head>
   <body>
+
+
     <div class="request items">
       <!-- Title -->
       <div class="title">
@@ -38,10 +47,29 @@
       <div class="item">
 
 
+<div class="item">
+
+
         <div class="image">
           <div class="row">
   <div class="column">
     <img src="../static/Uniform.jpg" alt="Uniforms">
+  </div>
+
+                        <label>
+      <input type="checkbox" checked="checked" name="remember"> Small
+              <hr>
+              <input type="checkbox" checked="checked" name="remember"> Medium
+              <hr>
+              <input type="checkbox" checked="checked"  name="remember"> Large
+              <hr>
+              <input type="checkbox" checked="checked" name="remember"> XLarge
+              <hr>
+              <input type="checkbox" checked="checked"  name="remember"> 2XLarge
+              <hr>
+              <input type="checkbox" checked="checked" name="remember"> 3XLarge
+
+    </label>
   </div>
 
         <div class="description">
@@ -61,7 +89,7 @@
         </div>
 
 <hr>
-
+<br>
                     <!-- Product #2 -->
       <div class="item">
 
@@ -72,6 +100,20 @@
     <img src="../static/School Pants.jpg" alt="Uniforms">
   </div>
 
+                        <label>
+      <input type="checkbox" checked="checked" name="remember"> Small
+              <hr>
+              <input type="checkbox" checked="checked" name="remember"> Medium
+              <hr>
+              <input type="checkbox" checked="checked"  name="remember"> Large
+              <hr>
+              <input type="checkbox" checked="checked" name="remember"> XLarge
+              <hr>
+              <input type="checkbox" checked="checked"  name="remember"> 2XLarge
+              <hr>
+              <input type="checkbox" checked="checked" name="remember"> 3XLarge
+              <hr>
+    </label>
         <div class="description">
           <h3>Uniform Pants</h3>
           <span></span>
@@ -93,7 +135,7 @@
 
       <!-- Product #3 -->
       <div class="item">
-      <hr>
+
 
         <div class="image">
           <div class="row">
@@ -121,7 +163,7 @@
 <hr>
       <!-- Product #4 -->
       <div class="item">
-      <hr>
+
 
         <div class="image">
           <div class="row">
@@ -131,6 +173,34 @@
 
         <div class="description">
           <h3>Backpacks</h3>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30" height="25">
+          </button>
+          <input type="text" name="name" value="0">
+          <button class="minus-btn" type="button" name="button">
+            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30" height="25">
+          </button>
+        </div>
+
+
+<hr>
+                    <!-- Product #5 -->
+      <div class="item">
+
+
+        <div class="image">
+          <div class="row">
+  <div class="column">
+    <img src="../static/Notebook.jpg" alt="Notebooks">
+  </div>
+
+        <div class="description">
+          <h3>Journals</h3>
           <span></span>
           <span></span>
         </div>
@@ -188,6 +258,7 @@
         $(this).toggleClass('is-active');
       });
     </script>
+
 
                                  </div>
                               </div>
