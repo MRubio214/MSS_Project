@@ -9,6 +9,38 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
     <meta name="robots" content="noindex,follow">
     <style>
+
+    ul.topnav {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+
+
+
+            ul.topnav li {float: left;}
+
+            ul.topnav li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+            ul.topnav li a.active {background-color: #c0c8c5;}
+
+            ul.topnav li.right {float: right;}
+
+            @media screen and (max-width: 600px) {
+              ul.topnav li.right,
+              ul.topnav li {float: none;}
+            }
+
     * {
         box-sizing: border-box;
     }
@@ -32,10 +64,17 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+
 </style>
   </head>
   <body>
-
+        <ul class="topnav">
+            <li><a class="active" id = "home" href="/">Home</a></li>
+            <li><a id = "about" href="/about">About</a></li>
+            <li><a id = "requestingitems" href="/requestingitems">RequestingItems</a></li>
+            <li class="right"><a id = "signup/login" href="/login">Signup/Login</a></li>
+        </ul>
 
     <div class="request items">
       <!-- Title -->
@@ -207,11 +246,11 @@
 
         <div class="quantity">
           <button class="plus-btn" type="button" name="button">
-            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30" height="25">
+            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30px" height="25px">
           </button>
           <input type="text" name="name" value="0">
           <button class="minus-btn" type="button" name="button">
-            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30" height="25">
+            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30px" height="25px">
           </button>
         </div>
 
@@ -268,5 +307,6 @@
                 </div>
             </div>
           </div>
+
   </body>
 </html>

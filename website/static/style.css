@@ -40,10 +40,7 @@ body {
   display: flex;
 }
 
-.item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
-}
+
 
 /* Product Image */
 .image {
@@ -96,7 +93,7 @@ body {
 button[class*=btn] {
   width: 30px;
   height: 30px;
-  background-color: #E1E8EE;
+
   border-radius: 6px;
   border: none;
   cursor: pointer;
