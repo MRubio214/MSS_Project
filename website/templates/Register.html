@@ -1,137 +1,98 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <title>Requested Items</title>
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
-    <style>
-        h1 {
-            font-size: 80px;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-        }
-        h2 {
-
-            color: white;
-            text-align: center;
-        }
-
-                body {
-            background-image: url("../static/grey-abstract-background-with-layers-vector.jpg");
-        }
-
-
-        * {
-box-sizing: border-box;
-}
-.column {
-float: left;
-width: 33.33%;
-padding: 5px;
-}
-/* Clearfix (clear floats) */
-.row::after {
-content: "";
-clear: both;
-display: table;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
 }
 
+* {
+  box-sizing: border-box;
+}
 
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
 
-    </style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
 </head>
-<!--suppress XmlDeprecatedElement -->
-<center>
-    <h1><b>Request Items</b></h1>
-</center>
 <body>
 
-    <div class="row">
-        <div class="column">
-            <img src="https://codehs.com/uploads/f47c6073e46863a855a7c0331e929899" alt="Uniforms" style="width: 50%;" />
-            <h2>School Uniforms</h2>
-            <br />
-            <br />
-            <img src="https://codehs.com/uploads/303770948b2b47c7010bb6172ab7a038" alt="Markers" style="width: 50%;" />
-            <h2>Markers</h2>
-            <br />
-            <br />
-            <img src="https://codehs.com/uploads/be069a6344d1f24b4468be65e22f5273" alt="Color pencils" style="width: 50%;" />
-            <h2>Color pencils</h2>
-        </div>
-        <div class="column">
-            <img src="https://codehs.com/uploads/a5df9802026aeaa9e4de841d980603e9" alt="Backpack" style="width: 50%;" />
-            <h2>Backpack</h2>
-            <br />
-            <br />
-            <img src="https://codehs.com/uploads/0cb4911407f5554ecdce5d87bf61aff7" alt="Pencils" style="width: 50%;" />
-            <h2>Pencils</h2>
-            <br />
-            <br />
-            <img src="https://codehs.com/uploads/c650eabb87a6c8dd511c5450121aea0e" alt="Eraser" style="width: 50%;" />
-            <h2>Erasers</h2>
-        </div>
-        <div class="column">
-            <img src="https://codehs.com/uploads/75eee8538bae0f3376ab30a557c8e4b5" alt="Glue" style="width: 50%;" />
-            <h2>Glue</h2>
-            <br />
-            <br />
-            <img src="https://codehs.com/uploads/7c5305caba984f76f3278d28d0300508" alt="Highlighters" style="width: 50%;" />
-            <h2>Highlighters</h2>
-            <br />
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-            <br />
-            <img src="https://codehs.com/uploads/6a816f91b2537ae39e87953d50ea14c5" alt="Scissors" style="width: 50%;" />
-            <h2>Scissors</h2>
-                 <div class="quantity">
-      <button class="plus-btn" type="button" name="button">
-        <img src="plus.svg" alt="" />
-      </button>
-      <input type="text" name="name" value="1">
-      <button class="minus-btn" type="button" name="button">
-        <img src="minus.svg" alt="" />
-      </button>
-    </div>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-        </div>
-    </div>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-<script type="text/javascript">
-      $('.minus-btn').on('click', function(e) {
-    		e.preventDefault();
-    		var $this = $(this);
-    		var $input = $this.closest('div').find('input');
-    		var value = parseInt($input.val());
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
 
-    		if (value > 1) {
-    			value = value - 1;
-    		} else {
-    			value = 0;
-    		}
 
-        $input.val(value);
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
 
-    	});
+  <div class="container signin">
+    <p>Already have an account? <a href="/login">Log in!</a>.</p>
+  </div>
+</form>
 
-    	$('.plus-btn').on('click', function(e) {
-    		e.preventDefault();
-    		var $this = $(this);
-    		var $input = $this.closest('div').find('input');
-    		var value = parseInt($input.val());
-
-    		if (value < 100) {
-      		value = value + 1;
-    		} else {
-    			value =100;
-    		}
-
-    		$input.val(value);
-    	});
-
-      $('.like-btn').on('click', function() {
-        $(this).toggleClass('is-active');
-      });
-    </script>
 </body>
+</html>
