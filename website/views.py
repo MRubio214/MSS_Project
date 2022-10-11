@@ -14,4 +14,7 @@ def about():
 def requestingitems():
     return render_template("RequestingItems.html")
 
+@views.route('/donate')
+def donate():
+    return render_template("Donate.html")
 
