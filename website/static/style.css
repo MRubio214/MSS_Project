@@ -8,7 +8,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  padding: 10px;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -77,8 +76,8 @@ body {
 
 /* Product Quantity */
 .quantity {
-  padding-top: 20px;
-  margin-right: 60px;
+  padding-top: 1px;
+  margin-right: 1px;
 }
 .quantity input {
   -webkit-appearance: none;
@@ -91,18 +90,16 @@ body {
 }
 
 button[class*=btn] {
-  width: 30px;
-  height: 30px;
-
-  border-radius: 6px;
+  background-color:transparent;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
 }
 .minus-btn img {
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 .plus-btn img {
-  margin-top: 2px;
+
 }
 button:focus,
 input:focus {
@@ -123,7 +120,7 @@ input:focus {
     justify-content: center;
   }
   .image img {
-    width: 50%;
+    width: 50px;
   }
   .image,
   .quantity,
@@ -133,6 +130,6 @@ input:focus {
     margin: 6px 0;
   }
   .buttons {
-    margin-right: 20px;
+    margin-right: 2px;
   }
 }
