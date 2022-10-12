@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank You!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+               ul.topnav {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+
+
+
+            ul.topnav li {float: left;}
+
+            ul.topnav li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+            ul.topnav li a.active {background-color: #c0c8c5;}
+
+            ul.topnav li.right {float: right;}
+
+            @media screen and (max-width: 600px) {
+              ul.topnav li.right,
+              ul.topnav li {float: none;}
+
+
+
+ h1 {text-align: center;}
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
+
+</style>
 </head>
 <body>
-    <h1>Thank you for your donation!!</h1>
-<h2>{{shortcode}}</h2>
+            <ul class="topnav">
+            <li><a class="active" id = "home" href="/">Home</a></li>
+            <li><a id = "about" href="/about">About</a></li>
+            <li><a id = "requestingitems" href="/requestingitems">RequestingItems</a></li>
+            <li class="right"><a id = "signup/login" href="/login">Signup/Login</a></li>
+        </ul>
+
+            <center><h1>Thank you for your donation!!</h1></center>
+            <center><h2>{{ shortcode }}</h2></center>
+            <center><h3>The next step is to gather your donations, and head to the donation center.</h3></center>
+<div class="center">
+    <img class="center" src="../static/Submitted.jfif" alt="Submit" width="500" height="500">
+</div>
+
+
 </body>
 </html>
