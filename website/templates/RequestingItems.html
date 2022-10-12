@@ -1,313 +1,293 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Request Items</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Request Items</title>
 
-    <link rel="stylesheet" href="../static/style.css" media="screen" title="no title" charset="utf-8">
-    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
-    <meta name="robots" content="noindex,follow">
-    <style>
+        <link rel="stylesheet" href="../static/style.css" media="screen" title="no title" charset="utf-8" />
+        <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+        <meta name="robots" content="noindex,follow" />
+        <style>
 
-    ul.topnav {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-              background-color: #333;
-            }
-
-
-
-            ul.topnav li {float: left;}
-
-            ul.topnav li a {
-              display: block;
-              color: white;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-            }
-
-            ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-            ul.topnav li a.active {background-color: #c0c8c5;}
-
-            ul.topnav li.right {float: right;}
-
-            @media screen and (max-width: 600px) {
-              ul.topnav li.right,
-              ul.topnav li {float: none;}
-            }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-    }
-
-    /* Clearfix (clear floats) */
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+              ul.topnav {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        background-color: #333;
+                      }
 
 
-    body {
-  background-image: url('../static/');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+
+                      ul.topnav li {float: left;}
+
+                      ul.topnav li a {
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                      }
+
+                      ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+                      ul.topnav li a.active {background-color: #c0c8c5;}
+
+                      ul.topnav li.right {float: right;}
+
+                      @media screen and (max-width: 600px) {
+                        ul.topnav li.right,
+                        ul.topnav li {float: none;}
+                      }
+
+              * {
+                  box-sizing: border-box;
+              }
+
+              .column {
+                  float: left;
+                  width: 33.33%;
+                  padding: 5px;
+              }
+
+              /* Clearfix (clear floats) */
+              .row::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+              }
 
 
-</style>
-  </head>
-  <body>
+              body {
+            background-image: url('../static/');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        </style>
+    </head>
+    <body>
         <ul class="topnav">
-            <li><a class="active" id = "home" href="/">Home</a></li>
-            <li><a id = "about" href="/about">About</a></li>
-            <li><a id = "requestingitems" href="/requestingitems">RequestingItems</a></li>
-            <li class="right"><a id = "signup/login" href="/login">Signup/Login</a></li>
+            <li><a class="active" id="home" href="/">Home</a></li>
+            <li><a id="about" href="/about">About</a></li>
+            <li><a id="requestingitems" href="/requestingitems">RequestingItems</a></li>
+            <li class="right"><a id="signup/login" href="/login">Signup/Login</a></li>
         </ul>
 
-    <div class="request items">
-      <!-- Title -->
-      <div class="title">
-        Request Items
-      </div>
+        <div class="request items">
+            <!-- Title -->
+            <div class="title">
+                Request Items
+            </div>
 
-      <!-- Product #1 -->
-      <div class="item">
+            <!-- Product #1 -->
+            <div class="item">
+                <div class="item">
+                    <div class="image">
+                        <div class="row">
+                            <div class="column">
+                                <img src="../static/Uniform.jpg" alt="Uniforms" />
+                            </div>
 
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember" /> Small
+                                <hr />
+                                <input type="checkbox" checked="checked" name="remember" /> Medium
+                                <hr />
+                                <input type="checkbox" checked="checked" name="remember" /> Large
+                                <hr />
+                                <input type="checkbox" checked="checked" name="remember" /> XLarge
+                                <hr />
+                                <input type="checkbox" checked="checked" name="remember" /> XXLarge
+                                <hr />
+                                <input type="checkbox" checked="checked" name="remember" /> XXXLarge
+                            </label>
+                        </div>
 
-<div class="item">
+                        <div class="description">
+                            <h3>Uniform Shirts</h3>
+                            <span></span>
+                            <span></span>
+                        </div>
 
+                        <div class="quantity">
+                            <button class="plus-btn" type="button" name="button">
+                                <img src="../static/Plus Sign.jpg" alt="Plus" width="30" height="25" />
+                            </button>
+                            <input type="text" name="name" value="0" />
+                            <button class="minus-btn" type="button" name="button">
+                                <img src="../static/Minus Sign.jpg" alt="Minus" width="30" height="25" />
+                            </button>
+                        </div>
 
-        <div class="image">
-          <div class="row">
-  <div class="column">
-    <img src="../static/Uniform.jpg" alt="Uniforms">
-  </div>
+                        <hr />
+                        <br />
+                        <!-- Product #2 -->
+                        <div class="item">
+                            <div class="image">
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="../static/School Pants.jpg" alt="Uniforms" />
+                                    </div>
 
-                        <label>
-      <input type="checkbox" checked="checked" name="remember"> Small
-              <hr>
-              <input type="checkbox" checked="checked" name="remember"> Medium
-              <hr>
-              <input type="checkbox" checked="checked"  name="remember"> Large
-              <hr>
-              <input type="checkbox" checked="checked" name="remember"> XLarge
-              <hr>
-              <input type="checkbox" checked="checked"  name="remember"> XXLarge
-              <hr>
-              <input type="checkbox" checked="checked" name="remember"> XXXLarge
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember" /> Small
+                                        <hr />
+                                        <input type="checkbox" checked="checked" name="remember" /> Medium
+                                        <hr />
+                                        <input type="checkbox" checked="checked" name="remember" /> Large
+                                        <hr />
+                                        <input type="checkbox" checked="checked" name="remember" /> XLarge
+                                        <hr />
+                                        <input type="checkbox" checked="checked" name="remember" /> XXLarge
+                                        <hr />
+                                        <input type="checkbox" checked="checked" name="remember" /> XXXLarge
+                                        <hr />
+                                    </label>
+                                    <div class="description">
+                                        <h3>Uniform Pants</h3>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
 
-    </label>
-  </div>
+                                    <div class="quantity">
+                                        <button class="plus-btn" type="button" name="button">
+                                            <img src="../static/Plus Sign.jpg" alt="Plus" width="30" height="25" />
+                                        </button>
+                                        <input type="text" name="name" value="0" />
+                                        <button class="minus-btn" type="button" name="button">
+                                            <img src="../static/Minus Sign.jpg" alt="Minus" width="30" height="25" />
+                                        </button>
+                                    </div>
 
-        <div class="description">
-          <h3>Uniform Shirts</h3>
-          <span></span>
-          <span></span>
-        </div>
+                                    <hr />
 
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30" height="25">
-          </button>
-          <input type="text" name="name" value="0">
-          <button class="minus-btn" type="button" name="button">
-            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30" height="25">
-          </button>
-        </div>
+                                    <!-- Product #3 -->
+                                    <div class="item">
+                                        <div class="image">
+                                            <div class="row">
+                                                <div class="column">
+                                                    <img src="../static/Pencil Packs.jpg" alt="Pencils" width="100" height="200" />
+                                                </div>
 
-<hr>
-<br>
-                    <!-- Product #2 -->
-      <div class="item">
+                                                <div class="description">
+                                                    <h3>Pencil Packs</h3>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
 
+                                                <div class="quantity">
+                                                    <button class="plus-btn" type="button" name="button">
+                                                        <img src="../static/Plus Sign.jpg" alt="Plus" width="30" height="25" />
+                                                    </button>
+                                                    <input type="text" name="name" value="0" />
+                                                    <button class="minus-btn" type="button" name="button">
+                                                        <img src="../static/Minus Sign.jpg" alt="Minus" width="30" height="25" />
+                                                    </button>
+                                                </div>
 
-        <div class="image">
-          <div class="row">
-  <div class="column">
-    <img src="../static/School Pants.jpg" alt="Uniforms">
-  </div>
+                                                <hr />
+                                                <!-- Product #4 -->
+                                                <div class="item">
+                                                    <div class="image">
+                                                        <div class="row">
+                                                            <div class="column">
+                                                                <img src="../static/Backpacks.jpg" alt="Backpacks" />
+                                                            </div>
 
-                        <label>
-      <input type="checkbox" checked="checked" name="remember"> Small
-              <hr>
-              <input type="checkbox" checked="checked" name="remember"> Medium
-              <hr>
-              <input type="checkbox" checked="checked"  name="remember"> Large
-              <hr>
-              <input type="checkbox" checked="checked" name="remember"> XLarge
-              <hr>
-              <input type="checkbox" checked="checked"  name="remember"> XXLarge
-              <hr>
-              <input type="checkbox" checked="checked" name="remember"> XXXLarge
-              <hr>
-    </label>
-        <div class="description">
-          <h3>Uniform Pants</h3>
-          <span></span>
-          <span></span>
-        </div>
+                                                            <div class="description">
+                                                                <h3>Backpacks</h3>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
 
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30" height="25">
-          </button>
-          <input type="text" name="name" value="0">
-          <button class="minus-btn" type="button" name="button">
-            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30" height="25">
-          </button>
-        </div>
+                                                            <div class="quantity">
+                                                                <button class="plus-btn" type="button" name="button">
+                                                                    <img src="../static/Plus Sign.jpg" alt="Plus" width="30" height="25" />
+                                                                </button>
+                                                                <input type="text" name="name" value="0" />
+                                                                <button class="minus-btn" type="button" name="button">
+                                                                    <img src="../static/Minus Sign.jpg" alt="Minus" width="30" height="25" />
+                                                                </button>
+                                                            </div>
 
-<hr>
+                                                            <hr />
+                                                            <!-- Product #5 -->
+                                                            <div class="item">
+                                                                <div class="image">
+                                                                    <div class="row">
+                                                                        <div class="column">
+                                                                            <img src="../static/Notebook.jpg" alt="Notebooks" />
+                                                                        </div>
 
+                                                                        <div class="description">
+                                                                            <h3>Journals</h3>
+                                                                            <span></span>
+                                                                            <span></span>
+                                                                        </div>
 
-      <!-- Product #3 -->
-      <di class="item">
+                                                                        <div class="quantity">
+                                                                            <button class="plus-btn" type="button" name="button">
+                                                                                <img src="../static/Plus Sign.jpg" alt="Plus" width="30px" height="25px" />
+                                                                            </button>
+                                                                            <input type="text" name="name" value="0" />
+                                                                            <button class="minus-btn" type="button" name="button">
+                                                                                <img src="../static/Minus Sign.jpg" alt="Minus" width="30px" height="25px" />
+                                                                            </button>
+                                                                        </div>
 
+                                                                        <hr />
 
-        <div class="image">
-          <div class="row">
-  <div class="column">
-    <img src="../static/Pencil Packs.jpg" alt="Pencils" width = "100" height = "200">
-  </div>
+                                                                        <script type="text/javascript">
+                                                                            $(".minus-btn").on("click", function (e) {
+                                                                                e.preventDefault();
+                                                                                var $this = $(this);
+                                                                                var $input = $this.closest("div").find("input");
+                                                                                var value = parseInt($input.val());
 
-        <div class="description">
-          <h3>Pencil Packs</h3>
-          <span></span>
-          <span></span>
-        </div>
+                                                                                if (value > 1) {
+                                                                                    value = value - 1;
+                                                                                } else {
+                                                                                    value = 0;
+                                                                                }
 
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30" height="25">
-          </button>
-          <input type="text" name="name" value="0">
-          <button class="minus-btn" type="button" name="button">
-            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30" height="25">
-          </button>
-        </div>
+                                                                                $input.val(value);
+                                                                            });
 
+                                                                            $(".plus-btn").on("click", function (e) {
+                                                                                e.preventDefault();
+                                                                                var $this = $(this);
+                                                                                var $input = $this.closest("div").find("input");
+                                                                                var value = parseInt($input.val());
 
-<hr>
-      <!-- Product #4 -->
-      <div class="item">
+                                                                                if (value < 100) {
+                                                                                    value = value + 1;
+                                                                                } else {
+                                                                                    value = 100;
+                                                                                }
 
+                                                                                $input.val(value);
+                                                                            });
 
-        <div class="image">
-          <div class="row">
-  <div class="column">
-    <img src="../static/Backpacks.jpg" alt="Backpacks">
-  </div>
-
-        <div class="description">
-          <h3>Backpacks</h3>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30" height="25">
-          </button>
-          <input type="text" name="name" value="0">
-          <button class="minus-btn" type="button" name="button">
-            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30" height="25">
-          </button>
-        </div>
-
-
-<hr>
-                    <!-- Product #5 -->
-      <div class="item">
-
-
-        <div class="image">
-          <div class="row">
-  <div class="column">
-    <img src="../static/Notebook.jpg" alt="Notebooks">
-  </div>
-
-        <div class="description">
-          <h3>Journals</h3>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="../static/Plus Sign.jpg" alt="Plus" width = "30px" height="25px">
-          </button>
-          <input type="text" name="name" value="0">
-          <button class="minus-btn" type="button" name="button">
-            <img src="../static/Minus Sign.jpg" alt="Minus" width = "30px" height="25px">
-          </button>
-        </div>
-
-
-<hr>
-
-
-
-
-
-    <script type="text/javascript">
-      $('.minus-btn').on('click', function(e) {
-    		e.preventDefault();
-    		var $this = $(this);
-    		var $input = $this.closest('div').find('input');
-    		var value = parseInt($input.val());
-
-    		if (value > 1) {
-    			value = value - 1;
-    		} else {
-    			value = 0;
-    		}
-
-        $input.val(value);
-
-    	});
-
-    	$('.plus-btn').on('click', function(e) {
-    		e.preventDefault();
-    		var $this = $(this);
-    		var $input = $this.closest('div').find('input');
-    		var value = parseInt($input.val());
-
-    		if (value < 100) {
-      		value = value + 1;
-    		} else {
-    			value =100;
-    		}
-
-    		$input.val(value);
-    	});
-
-      $('.like-btn').on('click', function() {
-        $(this).toggleClass('is-active');
-      });
-    </script>
-
-
-                                 </div>
-                              </div>
-                          </div>
-                      </div>
-                   </div>
+                                                                            $(".like-btn").on("click", function () {
+                                                                                $(this).toggleClass("is-active");
+                                                                            });
+                                                                        </script>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-
-
-  </body>
+        </div>
+    </body>
 </html>
