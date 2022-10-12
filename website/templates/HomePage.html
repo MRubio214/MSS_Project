@@ -4,11 +4,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-        .container{
-            height: 500px;
-            width: 800px;
-            margin-top: 30px;
-        }
+
+        button {
+        display: inline-block;
+        background-color: #0cb21c;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #8ef698;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
             body {margin: 0;}
 
             ul.topnav {
@@ -142,6 +177,11 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+.center {
+  margin: auto;
+  width: 17%;
+}
 </style>
     </head>
     <body>
@@ -158,10 +198,20 @@ img {
 
         <div style="padding: 0 16px;">
             <h2>MSS:Marketplace for School Supplies</h2>
-
         </div>
+        <hr>
+        <br>
+        <br>
+<div class="center">
+  <div class="container">
+    <form action="/donate">
+        <button class="btn btn-danger btn-lg">Donate</button>
+    </form>
+  </div>
+</div>
 
-
+<br>
+        <br>
 
 <div class="slideshow-container">
 
@@ -194,18 +244,18 @@ img {
 </div>
 <br>
 
+
+
 <div style="text-align:center">
   <span class="dot"></span>
   <span class="dot"></span>
   <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-</div>
-        <div class="container">
-        <form action="/donate">
-            <button class="btn btn-danger btn-lg">Donate</button>
-        </form>
-    </div>
+
+
+
+
 <script>
 let slideIndex = 0;
 showSlides();
@@ -248,5 +298,9 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 5 seconds
 }
 </script>
+
+
+
+
     </body>
 </html>
