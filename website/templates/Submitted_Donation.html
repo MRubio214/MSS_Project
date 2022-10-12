@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank You!</title>
-    <style>ul.topnav {
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+               ul.topnav {
               list-style-type: none;
               margin: 0;
               padding: 0;
@@ -38,6 +40,19 @@
  h1 {text-align: center;}
 
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
+
 </style>
 </head>
 <body>
@@ -51,6 +66,10 @@
             <center><h1>Thank you for your donation!!</h1></center>
             <center><h2>{{ shortcode }}</h2></center>
             <center><h3>The next step is to gather your donations, and head to the donation center.</h3></center>
+<div class="center">
+    <img class="center" src="../static/Submitted.jfif" alt="Submit" width="500" height="500">
+</div>
+
 
 </body>
 </html>
