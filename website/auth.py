@@ -17,8 +17,16 @@ def logout():
     return render_template("HomePage.html")
 
 
-@auth.route('/register')
+@auth.route('/register', methods=['GET', 'POST'])
 def sign_up():
-    return render_template("Register.html")
+    error = None
+    if request.method == 'POST':
+        if request.form['email'] == '' or request.form['psw'] == '' or request.form['psw-repeat'] == '':
+            error = 'All values need to be filled. Please try again.'
+        else:
+            return redirect(url_for('views.requestingitems'))
+    return render_template("Register.html", error=error)
+
+
 
 
